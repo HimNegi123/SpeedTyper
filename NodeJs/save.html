@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+  </head>
+  <body>
+   <div>
+     <button id="button1">Enter1</button>
+     <button id="button2">Enter2</button>
+   </div>
+      <script>
+          const button1=document.getElementById('button1'); 
+          const button2=document.getElementById('button2'); 
+          document.querySelector('div').addEventListener('click',(e)=>{
+            console.log('div')
+          })
+          button1.addEventListener('click',(e)=>{   
+            console.log('button:: 1');
+           e.stopPropagation()
+          });
+          button1.addEventListener('click',(e)=>{
+          console.log('button:: 2');             
+          })
+
+      </script>
+  </body>
+</html>
